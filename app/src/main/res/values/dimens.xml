@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="floating_button_margin">16dp</dimen>
+    <dimen name="logo_margin">12dp</dimen>
+    <dimen name="shape_line_width">3dp</dimen>
+    <dimen name="shape_pattern_interval">10dp</dimen>
+    <dimen name="camera_bounds_padding">24dp</dimen>
+    <dimen name="content_padding_left">40dp</dimen>
+    <dimen name="content_padding_top">20dp</dimen>
+    <dimen name="content_padding_right">60dp</dimen>
+    <dimen name="content_padding_bottom">100dp</dimen>
+
+</resources>

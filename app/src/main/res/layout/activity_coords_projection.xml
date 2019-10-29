@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/infos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_projection_cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/inv_crosshair"
+        app:layout_constraintBottom_toBottomOf="@+id/map_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/map_fragment"
+        app:layout_constraintStart_toStartOf="@+id/map_fragment"
+        app:layout_constraintTop_toTopOf="@id/map_fragment" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/infos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/map_fragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="@string/inv_text_misc_projection_coords_screen"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_projection_info_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            tools:text="@string/inv_format_misc_projection_coords_screen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="@string/inv_text_misc_projection_coords_map"
+            android:textColor="@android:color/black"
+            app:layout_wrapBefore="true" />
+
+        <TextView
+            android:id="@+id/tv_projection_info_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            tools:text="@string/inv_format_misc_projection_coords_map" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</android.support.constraint.ConstraintLayout>

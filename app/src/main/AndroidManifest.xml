@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.inavi.maps.androiddemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/inv_app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.inavi.mapsdk.AppKey"
+            android:value="YOUR_APP_KEY" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.InvMapFragmentActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_fragment"
+            android:label="@string/inv_name_map_fragment">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map" />
+        </activity>
+
+        <activity
+            android:name=".activity.InvMapViewActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_view"
+            android:label="@string/inv_name_map_view">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map" />
+        </activity>
+
+        <!--Shape-->
+        <activity
+            android:name=".activity.InvMarkerActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_marker"
+            android:label="@string/inv_name_marker">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <activity
+            android:name=".activity.InvMarkerOverlapActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_marker_overlap"
+            android:label="@string/inv_name_marker_overlap">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <activity
+            android:name=".activity.InvInfoWindowActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_info_window"
+            android:label="@string/inv_name_info_window">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <activity
+            android:name=".activity.InvPolygonActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_polygon"
+            android:label="@string/inv_name_polygon">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <activity
+            android:name=".activity.InvPolylineActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_polyline"
+            android:label="@string/inv_name_polyline">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <activity
+            android:name=".activity.InvMultiLineActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_multi_line"
+            android:label="@string/inv_name_multi_line">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <activity
+            android:name=".activity.InvCircleActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_circle"
+            android:label="@string/inv_name_circle">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <activity
+            android:name=".activity.GlobalZIndexActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_global_z_index"
+            android:label="@string/inv_name_global_z_index">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_shapes" />
+        </activity>
+
+        <!--카메라-->
+
+        <activity
+            android:name=".activity.CameraMoveActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_camera_move"
+            android:label="@string/inv_name_camera_move">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_camera" />
+        </activity>
+
+        <activity
+            android:name=".activity.CameraUpdateBuilderActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_camera_update_builder"
+            android:label="@string/inv_name_camera_update_builder">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_camera" />
+        </activity>
+
+        <activity
+            android:name=".activity.CameraFitBoundsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_camera_fit_bounds"
+            android:label="@string/inv_name_camera_fit_bounds">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_camera" />
+        </activity>
+
+        <activity
+            android:name=".activity.CameraEventsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_camera_events"
+            android:label="@string/inv_name_camera_events">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_camera" />
+        </activity>
+
+
+        <!--지도옵션-->
+        <activity
+            android:name=".activity.MapPaddingActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_option_padding"
+            android:label="@string/inv_name_map_option_padding">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map_option" />
+        </activity>
+
+        <activity
+            android:name=".activity.MapGestureActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_option_gesture"
+            android:label="@string/inv_name_map_option_gesture">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map_option" />
+        </activity>
+
+        <activity
+            android:name=".activity.MapControllerActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_option_controller"
+            android:label="@string/inv_name_map_option_controller">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map_option" />
+        </activity>
+
+        <!--터치 이벤트-->
+        <activity
+            android:name=".activity.MapClickEventActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_event_click_map"
+            android:label="@string/inv_name_event_click_map">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_event" />
+        </activity>
+        <activity
+            android:name=".activity.ShapeClickEventActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_event_click_shape"
+            android:label="@string/inv_name_event_click_shape">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_event" />
+        </activity>
+
+
+        <!--위치-->
+        <activity
+            android:name=".activity.UserTrackingModeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_location_tracking_mode"
+            android:label="@string/inv_name_location_tracking_mode">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_location" />
+        </activity>
+
+        <activity
+            android:name=".activity.CustomLocationActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_location_custom"
+            android:label="@string/inv_name_location_custom">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_location" />
+        </activity>
+
+
+        <!--기타-->
+        <activity
+            android:name=".activity.ProjectionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_misc_projection"
+            android:label="@string/inv_name_misc_projection">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_misc" />
+        </activity>
+
+    </application>
+
+</manifest>
