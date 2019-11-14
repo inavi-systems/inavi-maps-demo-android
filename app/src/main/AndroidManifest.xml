@@ -14,7 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
         <meta-data
@@ -237,10 +236,10 @@
         </activity>
 
         <activity
-            android:name=".activity.CustomLocationActivity"
+            android:name=".activity.LocationIconActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/inv_description_location_custom"
-            android:label="@string/inv_name_location_custom">
+            android:description="@string/inv_description_location_icon"
+            android:label="@string/inv_name_location_icon">
             <meta-data
                 android:name="@string/inv_category"
                 android:value="@string/inv_category_location" />

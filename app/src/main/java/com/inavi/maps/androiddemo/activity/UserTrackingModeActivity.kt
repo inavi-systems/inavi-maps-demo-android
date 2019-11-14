@@ -14,10 +14,10 @@ import android.widget.Spinner
 import com.inavi.maps.androiddemo.BuildConfig
 import com.inavi.maps.androiddemo.R
 import com.inavi.mapsdk.maps.*
-import kotlinx.android.synthetic.main.activity_location.*
+import kotlinx.android.synthetic.main.activity_user_tracking_mode.*
 
-class UserTrackingModeActivity : InvMapFragmentActivity(R.layout.activity_location, InvMapOptions().locationButtonVisible(true)),
-  OnUserTrackingModeChangedListener, AdapterView.OnItemSelectedListener {
+class UserTrackingModeActivity : InvMapFragmentActivity(R.layout.activity_user_tracking_mode, InvMapOptions().locationButtonVisible(true)),
+        OnUserTrackingModeChangedListener, AdapterView.OnItemSelectedListener {
 
   companion object {
     private const val PERMISSION_REQUEST_CODE = 10000

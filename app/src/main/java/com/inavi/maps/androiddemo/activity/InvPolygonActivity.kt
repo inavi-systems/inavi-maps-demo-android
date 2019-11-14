@@ -33,7 +33,7 @@ class InvPolygonActivity : InvMapFragmentActivity(InvMapOptions().camera(INIT_CA
   }
 
   override fun onMapReady(inaviMap: InaviMap) {
-    val polygon = InvPolygon().apply {
+    InvPolygon().apply {
       setCoords(POLYGON1_COORDS)
       fillColor = ColorUtils.setAlphaComponent(Color.BLUE, 127)
       strokeColor = Color.BLUE

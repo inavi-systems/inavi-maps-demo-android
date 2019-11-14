@@ -130,14 +130,17 @@
     <string name="inv_text_popup_settings">설정</string>
     <string name="inv_text_popup_ok">확인</string>
 
-    <string name="inv_name_location_custom">Custom Location</string>
-    <string name="inv_description_location_custom">사용자 위치 추적</string>
-    <string name="inv_text_location_custom">사용자 위치 추적 : </string>
-    <string-array name="inv_option_array_location_custom">
-        <item>None</item>
-        <item>서울시청</item>
-        <item>부산역</item>
-    </string-array>
+    <string name="inv_name_location_icon">Location Icon</string>
+    <string name="inv_description_location_icon">위치 아이콘 설정</string>
+    <string name="inv_toast_location_icon_click">위치 아이콘 클릭됨</string>
+    <string name="inv_text_location_icon_bearing">베어링 : </string>
+    <string name="inv_text_location_icon_bearing_value">0°</string>
+    <string name="inv_format_location_icon_bearing_value">%d°</string>
+    <string name="inv_option_location_icon_visible">위치 아이콘 표출</string>
+    <string name="inv_option_location_icon_image">아이콘 이미지 변경</string>
+    <string name="inv_option_location_icon_scale">아이콘 크기 변경</string>
+    <string name="inv_option_location_icon_circle_radius">원 반경 변경</string>
+    <string name="inv_option_location_icon_circle_color">원 색상 변경</string>
 
     <!-- 기타 -->
     <string name="inv_category_misc">기타</string>
