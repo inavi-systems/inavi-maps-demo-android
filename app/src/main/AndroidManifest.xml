@@ -100,10 +100,10 @@
         </activity>
 
         <activity
-            android:name=".activity.InvMultiLineActivity"
+            android:name=".activity.InvRouteActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/inv_description_multi_line"
-            android:label="@string/inv_name_multi_line">
+            android:description="@string/inv_description_route"
+            android:label="@string/inv_name_route">
             <meta-data
                 android:name="@string/inv_category"
                 android:value="@string/inv_category_shapes" />

@@ -1,7 +1,6 @@
 package com.inavi.maps.androiddemo.activity
 
 import android.graphics.Color
-import android.os.Handler
 import android.support.v4.graphics.ColorUtils
 import com.inavi.maps.androiddemo.R
 import com.inavi.mapsdk.constants.InvConstants
@@ -34,7 +33,7 @@ class InvPolygonActivity : InvMapFragmentActivity(InvMapOptions().camera(INIT_CA
 
   override fun onMapReady(inaviMap: InaviMap) {
     InvPolygon().apply {
-      setCoords(POLYGON1_COORDS)
+      coords = POLYGON1_COORDS
       fillColor = ColorUtils.setAlphaComponent(Color.BLUE, 127)
       strokeColor = Color.BLUE
       strokeWidth = resources.getDimensionPixelSize(R.dimen.shape_line_width).toFloat()
@@ -42,7 +41,7 @@ class InvPolygonActivity : InvMapFragmentActivity(InvMapOptions().camera(INIT_CA
     }
 
     InvPolygon().apply {
-      setCoords(POLYGON2_COORDS)
+      coords = POLYGON2_COORDS
       fillColor = ColorUtils.setAlphaComponent(Color.YELLOW, 127)
       strokeColor = Color.BLACK
       strokeWidth = resources.getDimensionPixelSize(R.dimen.shape_line_width).toFloat()

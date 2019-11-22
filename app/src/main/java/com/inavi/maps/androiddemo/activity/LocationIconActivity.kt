@@ -13,6 +13,10 @@ import kotlinx.android.synthetic.main.activity_location_icon.*
 
 class LocationIconActivity : InvMapFragmentActivity(R.layout.activity_location_icon) {
 
+  companion object {
+    private val CUSTOM_LOCATION_ICON_IMAGE = InvImage(R.drawable.baseline_directions_run_black_36dp)
+  }
+
   private var inaviMap: InaviMap? = null
   private var locationIcon: LocationIcon? = null
 
@@ -78,7 +82,7 @@ class LocationIconActivity : InvMapFragmentActivity(R.layout.activity_location_i
     this.locationIcon = inaviMap.locationIcon
 
     locationIcon?.position = inaviMap.cameraPosition.target
-    locationIcon?.setOnClickListener { shape ->
+    locationIcon?.setOnClickListener { _ ->
       Toast.makeText(this, getString(R.string.inv_toast_location_icon_click), Toast.LENGTH_SHORT).show()
       true
     }
@@ -100,7 +104,7 @@ class LocationIconActivity : InvMapFragmentActivity(R.layout.activity_location_i
 
     setCheckListener(checkedOptionImage) { isChecked ->
       locationIcon?.image = when (isChecked) {
-        true -> InvImage(R.drawable.baseline_directions_run_black_36dp)
+        true -> CUSTOM_LOCATION_ICON_IMAGE
         else -> LocationIcon.DEFAULT_IMAGE
       }
     }
