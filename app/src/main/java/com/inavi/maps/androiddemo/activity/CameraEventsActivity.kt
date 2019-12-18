@@ -19,10 +19,13 @@ class CameraEventsActivity : InvMapFragmentActivity(R.layout.activity_camera_eve
     private val CAMERA_POSITION2 = CameraPosition(LatLng(36.99473, 127.81832), 14.0, 0.0, 0.0)
   }
 
+  private var inaviMap: InaviMap? = null
   private var isInitPosition = true
-  private var isMoving = false
+  private var isMovingByButton = false
 
   override fun onMapReady(inaviMap: InaviMap) {
+    this.inaviMap = inaviMap
+
     InvMarker().apply {
       position = CAMERA_POSITION1.target
       iconImage = InvMarkerIcons.RED
@@ -36,19 +39,17 @@ class CameraEventsActivity : InvMapFragmentActivity(R.layout.activity_camera_eve
     }
 
     inaviMap.addOnCameraChangeListener {
-      val position = inaviMap.cameraPosition
-      text_camera_info.text = getString(R.string.inv_format_camera_info,
-        "이동", position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing)
+      showCameraPositionInfo(true)
     }
     inaviMap.addOnCameraIdleListener {
-      val position = inaviMap.cameraPosition
-      text_camera_info.text = getString(R.string.inv_format_camera_info,
-        "대기", position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing)
+      showCameraPositionInfo(false)
     }
+
     text_camera_info.visibility = View.VISIBLE
+    showCameraPositionInfo(false)
 
     fab.setOnClickListener {
-      if (isMoving) {
+      if (isMovingByButton) {
         inaviMap.cancelTransitions()
         return@setOnClickListener
       }
@@ -59,20 +60,28 @@ class CameraEventsActivity : InvMapFragmentActivity(R.layout.activity_camera_eve
           else -> CAMERA_POSITION1
         }).setAnimationType(CameraAnimationType.Fly, 3000)
         .setCancelCallback {
-          isMoving = false
+          isMovingByButton = false
           fab.setImageResource(R.drawable.ic_play_arrow_black_24dp)
           Toast.makeText(this@CameraEventsActivity, R.string.inv_toast_camera_update_cancelled, Toast.LENGTH_SHORT).show()
         }
         .setFinishCallback {
-          isMoving = false
+          isMovingByButton = false
           fab.setImageResource(R.drawable.ic_play_arrow_black_24dp)
           Toast.makeText(this@CameraEventsActivity, R.string.inv_toast_camera_update_finished, Toast.LENGTH_SHORT).show()
         })
 
-      isMoving = true
+      isMovingByButton = true
       fab.setImageResource(R.drawable.ic_stop_black_24dp)
 
       isInitPosition = !isInitPosition
+    }
+  }
+
+  private fun showCameraPositionInfo(isMoving: Boolean) {
+    val statusText = if (isMoving) "이동" else "대기"
+    inaviMap?.cameraPosition?.let {
+      text_camera_info.text = getString(R.string.inv_format_camera_info,
+              statusText, it.target.latitude, it.target.longitude, it.zoom, it.tilt, it.bearing)
     }
   }
 }

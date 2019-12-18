@@ -30,6 +30,7 @@ class ProjectionActivity : InvMapFragmentActivity(R.layout.activity_coords_proje
     inaviMap.addOnCameraChangeListener {
       updateProjection()
     }
+    updateProjection()
   }
 
   private fun updateProjection() {

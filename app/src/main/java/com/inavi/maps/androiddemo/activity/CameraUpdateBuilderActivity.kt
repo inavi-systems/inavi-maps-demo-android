@@ -49,6 +49,8 @@ class CameraUpdateBuilderActivity : InvMapFragmentActivity(R.layout.activity_cam
     camera_update_bearing.setOnClickListener(optionClickListener)
 
     start_camera_move.setOnClickListener {
+      var duration = 1000L
+
       val builder = CameraUpdateBuilder().apply {
         if (camera_update_target.isChecked) {
           targetTo(when (isInitPosition) {
@@ -56,6 +58,7 @@ class CameraUpdateBuilderActivity : InvMapFragmentActivity(R.layout.activity_cam
             else -> POSITION1
           })
           isInitPosition = !isInitPosition
+          duration = 5000L
         }
         val cameraPosition = inaviMap.cameraPosition
         if (camera_update_zoom.isChecked) {
@@ -71,7 +74,7 @@ class CameraUpdateBuilderActivity : InvMapFragmentActivity(R.layout.activity_cam
         if (camera_update_bearing.isChecked) bearingBy(30.0)
       }
 
-      inaviMap.moveCamera(CameraUpdate.from(builder).setAnimationType(CameraAnimationType.Easing, 500))
+      inaviMap.moveCamera(CameraUpdate.from(builder).setAnimationType(CameraAnimationType.Fly, duration))
     }
   }
 }

@@ -46,7 +46,7 @@ class CameraFitBoundsActivity : InvMapFragmentActivity(R.layout.activity_fab) {
         when (isInitPosition) {
           true -> CameraUpdate.fitBounds(bounds, padding)
           else -> CameraUpdate.newCameraPosition(InvConstants.POSITION_INAVI)
-        }.setAnimationType(CameraAnimationType.Fly, 1000))
+        }.setAnimationType(CameraAnimationType.Fly, 3000))
       fab.setImageResource(
         when (isInitPosition) {
           true -> R.drawable.ic_replay_24dp

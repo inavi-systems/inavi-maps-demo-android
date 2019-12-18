@@ -17,13 +17,13 @@ import com.inavi.mapsdk.maps.*
 import kotlinx.android.synthetic.main.activity_user_tracking_mode.*
 
 class UserTrackingModeActivity : InvMapFragmentActivity(R.layout.activity_user_tracking_mode, InvMapOptions().locationButtonVisible(true)),
-        OnUserTrackingModeChangedListener, AdapterView.OnItemSelectedListener {
+  OnUserTrackingModeChangedListener, AdapterView.OnItemSelectedListener {
 
   companion object {
     private const val PERMISSION_REQUEST_CODE = 10000
   }
 
-  private var userTrackingMode = UserTrackingMode.None
+  private var userTrackingMode = UserTrackingMode.Tracking
 
   private var inaviMap: InaviMap? = null
   private var locationProvider: FusedLocationProvider? = null
@@ -76,9 +76,9 @@ class UserTrackingModeActivity : InvMapFragmentActivity(R.layout.activity_user_t
 
   override fun onMapReady(inaviMap: InaviMap) {
     this.inaviMap = inaviMap
+    inaviMap.addOnUserTrackingModeChangedListener(this)
     inaviMap.locationProvider = locationProvider
     inaviMap.userTrackingMode = userTrackingMode
-    inaviMap.addOnUserTrackingModeChangedListener(this)
   }
 
   override fun onTrackingModeChanged(userTrackingMode: UserTrackingMode) {

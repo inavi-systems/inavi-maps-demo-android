@@ -86,10 +86,10 @@ class InvRouteActivity : InvMapFragmentActivity(R.layout.activity_route, InvMapO
         tvPassRatio.text = "${(progress * 0.1).toInt()}%"
 
         inaviMap.moveCamera(CameraUpdate.from(CameraUpdateBuilder()
-                .targetTo(routeShape.passPosition)
-                .zoomTo(16.0)
-                .tiltTo(60.0)
-                .bearingTo(routeShape.passAngle)).apply {
+          .targetTo(routeShape.passPosition)
+          .zoomTo(16.0)
+          .tiltTo(60.0)
+          .bearingTo(routeShape.passAngle)).apply {
           animationType = CameraAnimationType.Linear
           durationMs = 500
         })
@@ -115,10 +115,14 @@ class InvRouteActivity : InvMapFragmentActivity(R.layout.activity_route, InvMapO
         listOf(
           LatLng(37.39475, 127.11271),
           LatLng(37.39606, 127.11274),
-          LatLng(37.39608, 127.11272),
+          LatLng(37.39608, 127.11273),
           LatLng(37.39611, 127.11270),
           LatLng(37.39614, 127.11262),
-          LatLng(37.39613, 127.11121),
+          LatLng(37.39614, 127.11141),
+          LatLng(37.39616, 127.11134),
+          LatLng(37.39620, 127.11127),
+          LatLng(37.39624, 127.11124),
+          LatLng(37.39629, 127.11122),
           LatLng(37.39633, 127.11121)
         ),
         Color.RED, Color.WHITE),
@@ -137,8 +141,13 @@ class InvRouteActivity : InvMapFragmentActivity(R.layout.activity_route, InvMapO
       InvRoute.InvRouteLink(
         listOf(
           LatLng(37.40091, 127.11120),
-          LatLng(37.40163, 127.11116),
-          LatLng(37.40161, 127.11077),
+          LatLng(37.40156, 127.11118),
+          LatLng(37.40160, 127.11116),
+          LatLng(37.40162, 127.11112),
+          LatLng(37.40162, 127.11085),
+          LatLng(37.40164, 127.11081),
+          LatLng(37.40167, 127.11078),
+          LatLng(37.40170, 127.11077),
           LatLng(37.40217, 127.11077)
         ),
         Color.RED, Color.WHITE)

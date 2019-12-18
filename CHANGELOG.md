@@ -1,5 +1,23 @@
 # Change Log
 
+## 0.3.1 - 2019-12-18
+
+### Features
+ - 지도 이동 영역을 제한하는 I/F 추가
+   - `InaviMap#setConstraintBounds`, `InaviMap#getConstraintBounds`
+ - 로고 클릭 이벤트 활성화 여부 설정 I/F 추가
+   - `UiSettings#setLogoClickEnabled`, `UiSettings#isLogoClickEnabled`
+ - 오픈소스 라이선스, 법적 공지 Activity 호출 Intent I/F 추가
+   - `InaviMapSdk#getIntentLicenseActivity`, `InaviMapSdk#getIntentLegalNoticeActivity`
+ - 마커 아이콘과 타이틀 사이의 여백을 설정하는 기능 추가
+   - `InvMarker#setTitleMargin`, `InvMarker#getTitleMargin`
+
+### Bug fixes
+ - 지도 줌 제스처 비활성화 시 지도 더블 탭 이벤트 콜백이 호출되지 않는 오류 수정
+ - 초기 지도 로딩 중 `UserTrackingMode`가 설정되지 않는 오류 수정
+ - 초기 지도 로딩 중 `CameraUpdate#setReason`이 무시되는 오류 수정
+   - 초기 지도 위치는 카메라 변경 콜백이 호출되지 않게 변경
+
 ## 0.3.0 - 2019-11-26
 
 ### Features

@@ -21,7 +21,7 @@ class CameraMoveActivity : InvMapFragmentActivity(R.layout.activity_camera_move)
   }
 
   private var isInitPosition = true
-  private var animationType = CameraAnimationType.None
+  private var animationType = CameraAnimationType.Fly
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -40,6 +40,7 @@ class CameraMoveActivity : InvMapFragmentActivity(R.layout.activity_camera_move)
         }
       }
     }
+    camera_animation_type.setSelection(CameraAnimationType.Fly.ordinal)
   }
 
   override fun onMapReady(inaviMap: InaviMap) {
