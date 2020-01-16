@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
 
+        <!-- 지도 -->
         <activity
             android:name=".activity.InvMapFragmentActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -48,7 +49,7 @@
                 android:value="@string/inv_category_map" />
         </activity>
 
-        <!--Shape-->
+        <!-- 셰이프 -->
         <activity
             android:name=".activity.InvMarkerActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -129,8 +130,7 @@
                 android:value="@string/inv_category_shapes" />
         </activity>
 
-        <!--카메라-->
-
+        <!-- 카메라 -->
         <activity
             android:name=".activity.CameraMoveActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -171,8 +171,7 @@
                 android:value="@string/inv_category_camera" />
         </activity>
 
-
-        <!--지도옵션-->
+        <!-- 지도 옵션 -->
         <activity
             android:name=".activity.MapPaddingActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -203,7 +202,7 @@
                 android:value="@string/inv_category_map_option" />
         </activity>
 
-        <!--터치 이벤트-->
+        <!-- 클릭 이벤트 -->
         <activity
             android:name=".activity.MapClickEventActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -223,8 +222,7 @@
                 android:value="@string/inv_category_event" />
         </activity>
 
-
-        <!--위치-->
+        <!-- 위치 -->
         <activity
             android:name=".activity.UserTrackingModeActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -245,8 +243,7 @@
                 android:value="@string/inv_category_location" />
         </activity>
 
-
-        <!--기타-->
+        <!-- 기타 -->
         <activity
             android:name=".activity.ProjectionActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"

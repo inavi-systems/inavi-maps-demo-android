@@ -48,5 +48,15 @@ class InvMarkerOverlapActivity : InvMapFragmentActivity(R.layout.activity_inv_ma
         }
       }
     }
+
+    animation_enabled.setOnClickListener { v ->
+      if (v is Checkable) {
+        val checked = v.isChecked
+        v.isChecked = !checked
+        for (marker in markers) {
+          marker.isTransitionEnabled = !checked
+        }
+      }
+    }
   }
 }

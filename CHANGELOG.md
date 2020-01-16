@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.3.2 - 2020-01-16
+
+### Features
+ - 마커 표출 상태 변경 시 애니메이션 기본값 비활성화로 변경
+ - 마커 표출 상태 변경 시 애니메이션 설정 API 추가
+   - InvMarker#setTransitionEnabled, InvMarker#isTransitionEnabled (Android)
+
+### Bug fixes
+ - 마커 타이틀에 "^" 문자 포함 시 줄바꿈되는 오류 수정
+
 ## 0.3.1 - 2019-12-18
 
 ### Features
