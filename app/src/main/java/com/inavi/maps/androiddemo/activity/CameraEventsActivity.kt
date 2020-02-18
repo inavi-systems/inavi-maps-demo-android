@@ -81,7 +81,7 @@ class CameraEventsActivity : InvMapFragmentActivity(R.layout.activity_camera_eve
     val statusText = if (isMoving) "이동" else "대기"
     inaviMap?.cameraPosition?.let {
       text_camera_info.text = getString(R.string.inv_format_camera_info,
-              statusText, it.target.latitude, it.target.longitude, it.zoom, it.tilt, it.bearing)
+        statusText, it.target.latitude, it.target.longitude, it.zoom, it.tilt, it.bearing)
     }
   }
 }

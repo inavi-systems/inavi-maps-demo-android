@@ -130,6 +130,17 @@
                 android:value="@string/inv_category_shapes" />
         </activity>
 
+        <!-- 클러스터링 -->
+        <activity
+            android:name=".activity.MarkerClusteringActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_marker_clustering"
+            android:label="@string/inv_name_marker_clustering">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_clustering" />
+        </activity>
+
         <!-- 카메라 -->
         <activity
             android:name=".activity.CameraMoveActivity"

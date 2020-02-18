@@ -55,6 +55,14 @@
     <string name="inv_description_global_z_index">셰이프 표출 우선순위 설정</string>
     <string name="inv_option_polyline_under_circle">선형을 원 뒤에 표출</string>
 
+    <!-- 클러스터링 -->
+    <string name="inv_category_clustering">클러스터링</string>
+
+    <string name="inv_name_marker_clustering">Marker Clustering</string>
+    <string name="inv_description_marker_clustering">마커 클러스터링</string>
+    <string name="inv_format_cluster_click">클러스터 클릭\n위치 : (%1$.5f, %2$.5f)\n포함된 아이템 개수 : %3$d개</string>
+    <string name="inv_format_cluster_item_click">아이템 클릭\n위치 : (%1$.5f, %2$.5f)\n번호 : %3$d</string>
+
     <!-- 카메라 -->
     <string name="inv_category_camera">카메라</string>
 

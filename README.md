@@ -36,7 +36,7 @@ allprojects {
 /* App Module build.gradle */
 
 dependencies {
-    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.3.2'
+    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.4.0'
 }
 ```
 
@@ -73,12 +73,12 @@ InaviMapSdk.getInstance(context).appKey = "YOUR_APP_KEY"
 추가적인 iNavi Maps SDK 사용법은 [iNavi Maps API 센터](http://imapsapi.inavi.com/)를 참고하시기 바랍니다.
 
 
-[InaviMapSdk]: <http://imapsapi.inavi.com/Android/com/inavi/mapsdk/maps/InaviMapSdk.html>
+[InaviMapSdk]: <https://inavi-systems.github.io/inavi-maps-sdk-reference/android/com/inavi/mapsdk/maps/InaviMapSdk.html>
 [NHN Toast Console]: <https://console.toast.com/>
 
 
 ## License
-Copyright © 2019 iNavi Systems
+Copyright © 2019-2020 iNavi Systems
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

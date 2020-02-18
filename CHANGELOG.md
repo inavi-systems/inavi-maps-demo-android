@@ -1,11 +1,25 @@
 # Change Log
 
+## 0.4.0 - 2020-02-17
+
+### Features
+- 마커 클러스터링 기능 추가
+  - `Cluster`, `ClusterItem`, `ClusterManager`, `ClusterManager#OnRenderListener`, `ClusterManager#OnClickListener`,  `ClusterIconGenerator`, `DefaultClusterIconGenerator`
+- `InvRoute#lineWidth` 속성 기본값 `10`으로 변경
+- `InvRouteLink#lineColor` 속성 기본값 `Color.WHITE`로 변경
+- `InvRouteLink#strokeColor` 속성 기본값 `Color.BLACK`으로 변경
+
+### Bug fixes
+- `InvRoute#strokeWidth` 속성이 정상적으로 적용되지 않는 오류 수정
+- `InvRoute` 표출 시 간헐적으로 외곽선이 비정상적으로 표출되는 오류 수정
+- 아이콘 이미지 크기 변경 시 아이콘의 위치가 비정상적으로 표출되는 오류 수정
+
 ## 0.3.2 - 2020-01-16
 
 ### Features
  - 마커 표출 상태 변경 시 애니메이션 기본값 비활성화로 변경
  - 마커 표출 상태 변경 시 애니메이션 설정 API 추가
-   - InvMarker#setTransitionEnabled, InvMarker#isTransitionEnabled (Android)
+   - `InvMarker#setTransitionEnabled`, `InvMarker#isTransitionEnabled`
 
 ### Bug fixes
  - 마커 타이틀에 "^" 문자 포함 시 줄바꿈되는 오류 수정

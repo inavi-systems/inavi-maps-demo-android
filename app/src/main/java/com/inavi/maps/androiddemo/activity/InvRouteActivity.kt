@@ -47,8 +47,8 @@ class InvRouteActivity : InvMapFragmentActivity(R.layout.activity_route, InvMapO
     }.map = inaviMap
 
     routeShape.apply {
-      lineWidth       = 9.DpToPx()
-      strokeWidth     = 3.DpToPx()
+      lineWidth       = 8.DpToPx()
+      strokeWidth     = 2.DpToPx()
       links           = LINKS
       passLineColor   = Color.LTGRAY
       passStrokeColor = Color.WHITE
