@@ -213,6 +213,16 @@
                 android:value="@string/inv_category_map_option" />
         </activity>
 
+        <activity
+            android:name=".activity.MapRestrictionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_option_restriction_map"
+            android:label="@string/inv_name_map_option_restriction">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map_option" />
+        </activity>
+
         <!-- 클릭 이벤트 -->
         <activity
             android:name=".activity.MapClickEventActivity"

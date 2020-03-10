@@ -129,6 +129,11 @@
     <string name="inv_option_zoom">줌 컨트롤러</string>
     <string name="inv_option_cur_location">현위치 버튼</string>
 
+    <!-- 지도 제한 -->
+    <string name="inv_name_map_option_restriction">Map Restriction</string>
+    <string name="inv_description_map_option_restriction_map">지도 제한</string>
+    <string name="inv_option_apply_restriction">지도 제한</string>
+
     <!-- 위치 -->
     <string name="inv_category_location">위치</string>
     <string name="inv_name_location_tracking_mode">User Tracking Mode</string>
