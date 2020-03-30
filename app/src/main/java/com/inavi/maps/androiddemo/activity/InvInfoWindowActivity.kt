@@ -32,7 +32,7 @@ class InvInfoWindowActivity : InvMapFragmentActivity(R.layout.activity_inv_info_
       position = LatLng(37.40465, 127.10986)
       iconImage = InvMarkerIcons.RED
       setOnClickListener {
-        infoWindow.setMarker(this)
+        infoWindow.marker = this
         if (!infoWindow.isAttached) {
           infoWindow.map = inaviMap
         }
@@ -46,7 +46,7 @@ class InvInfoWindowActivity : InvMapFragmentActivity(R.layout.activity_inv_info_
       position = LatLng(37.40058, 127.11231)
       iconImage = InvMarkerIcons.BLUE
       setOnClickListener {
-        infoWindow.setMarker(this)
+        infoWindow.marker = this
         if (!infoWindow.isAttached) {
           infoWindow.map = inaviMap
         }
