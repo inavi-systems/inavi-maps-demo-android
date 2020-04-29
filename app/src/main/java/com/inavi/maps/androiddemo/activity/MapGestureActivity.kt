@@ -23,6 +23,10 @@ class MapGestureActivity : InvMapFragmentActivity(R.layout.activity_map_option_g
     chk_gesture_enabled_rotate
   }
 
+  private val chkFocalCenter: CheckedTextView by lazy {
+    chk_gesture_focal_center
+  }
+
   private fun setCheckListener(chk: CheckedTextView, changedState: ((isChecked: Boolean) -> Unit)? = null) {
     changedState?.invoke(chk.isChecked)
 
@@ -50,5 +54,8 @@ class MapGestureActivity : InvMapFragmentActivity(R.layout.activity_map_option_g
       inaviMap.uiSettings.isRotateGesturesEnabled = isChecked
     }
 
+    setCheckListener(chkFocalCenter) { isChecked ->
+      inaviMap.uiSettings.isFocalPointCenter = isChecked
+    }
   }
 }

@@ -121,6 +121,7 @@
     <string name="inv_option_enabled_zoom">줌</string>
     <string name="inv_option_enabled_tilt">기울기</string>
     <string name="inv_option_enabled_bearing">회전</string>
+    <string name="inv_option_focal_center">지도 중심 기준</string>
 
     <string name="inv_name_map_option_controller">Map Controller</string>
     <string name="inv_description_map_option_controller">지도 컨트롤러 설정</string>
