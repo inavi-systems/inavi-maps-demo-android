@@ -14,8 +14,6 @@ Android 플랫폼에서 아이나비 지도를 사용하기 위한 프로젝트 
 ## Project 환경 구성
 다음과 같이 Project 및 App 모듈 레벨의 build.gradle 파일에 아이나비 지도 저장소를 추가하고, 의존성을 설정합니다.
 
-> `아이나비 지도 Android SDK는 Bintray를 통해 배포되며, Beta 기간 종료 후에는 정책에 맞춰 변경될 수 있습니다. (사전 공지 예정)`
-
 ```gradle
 /* Root Project build.gradle */
 
@@ -35,7 +33,7 @@ allprojects {
 /* App Module build.gradle */
 
 dependencies {
-    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.4.5'
+    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.4.6'
 }
 ```
 
