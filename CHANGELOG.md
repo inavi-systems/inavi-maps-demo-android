@@ -1,4 +1,10 @@
 # Change Log
+## 0.4.8 - 2020-07-16
+
+### Features
+- 지도 렌더 뷰 TextureView 모드 지원
+  - `InvMapOptions#textureViewMode`, `InvMapOptions#getTextureViewMode`
+
 ## 0.4.7 - 2020-07-01
 
 ### Bug Fixes
