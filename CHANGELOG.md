@@ -1,4 +1,10 @@
 # Change Log
+## 0.5.0 - 2020-07-28
+
+### Features
+- 경로 셰이프에 패턴 이미지 API 추가
+  - `InvRoute#setPatternImage`, `InvRoute#getPatternImage`, `InvRoute#setPatternMargin`, `InvRoute#getPatternMargin`, `InvRoute#setPatternScale`, `InvRoute#getPatternScale`
+  
 ## 0.4.8 - 2020-07-16
 
 ### Features
