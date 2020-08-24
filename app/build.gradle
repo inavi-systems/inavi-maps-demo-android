@@ -9,7 +9,7 @@ android {
         applicationId "com.inavi.maps.androiddemo"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 13
+        versionCode 14
         versionName "$VERSION_NAME"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

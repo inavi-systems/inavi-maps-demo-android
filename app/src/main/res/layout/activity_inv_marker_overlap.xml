@@ -49,6 +49,18 @@
             android:text="@string/inv_option_allow_overlap_title" />
 
         <CheckedTextView
+            android:id="@+id/allow_overlap_symbols"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:checked="false"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/inv_option_allow_overlap_symbols" />
+
+        <CheckedTextView
             android:id="@+id/animation_enabled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
