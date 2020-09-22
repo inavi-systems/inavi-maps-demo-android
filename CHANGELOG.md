@@ -1,10 +1,16 @@
 # Change Log
+## 0.5.2 - 2020-09-22
+
+### Features
+- 지도 초기옵션 속성 추가
+  - `InvMapOptions#minZoom`, `InvMapOptions#maxZoom`, `InvMapOptions#minTilt`, `InvMapOptions#maxTilt`, `InvMapOptions#zoomGesturesEnabled`, `InvMapOptions#scrollGesturesEnabled`, `InvMapOptions#rotateGesturesEnabled`, `InvMapOptions#tiltGesturesEnabled`, `InvMapOptions#logoClickEnabled`, `InvMapOptions#focalPointCenter`
+- XML Attributes를 통한 지도 초기옵션 설정 지원
+
 ## 0.5.1 - 2020-08-24
 
 ### Features
 - 마커와 지도상 심볼 겹침을 설정하는 API 추가
   - `InvMarker#isAllowOverlapSymbols`, `InvMarker#setAllowOverlapSymbols`
-
 
 ## 0.5.0 - 2020-07-28
 
