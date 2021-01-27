@@ -135,6 +135,11 @@
     <string name="inv_description_map_option_restriction_map">지도 제한</string>
     <string name="inv_option_apply_restriction">지도 제한</string>
 
+    <!-- 심벌 크기 -->
+    <string name="inv_name_map_option_symbol_scale">Map Symbol Scale</string>
+    <string name="inv_description_map_option_symbol_scale">지도 심벌 크기</string>
+    <string name="inv_option_apply_symbol_scale">심벌 크게</string>
+
     <!-- 위치 -->
     <string name="inv_category_location">위치</string>
     <string name="inv_name_location_tracking_mode">User Tracking Mode</string>

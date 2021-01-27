@@ -33,7 +33,7 @@ allprojects {
 /* App Module build.gradle */
 
 dependencies {
-    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.5.3'
+    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.6.0'
 }
 ```
 
@@ -73,7 +73,7 @@ InaviMapSdk.getInstance(context).appKey = "YOUR_APP_KEY"
 
 
 ## License
-© 2019-2020. iNavi Systems Corp. All rights reserved.
+© 2019-2021. iNavi Systems Corp. All rights reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
