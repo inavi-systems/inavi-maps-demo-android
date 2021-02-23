@@ -13,8 +13,9 @@ Android 플랫폼에서 아이나비 지도를 사용하기 위한 프로젝트 
 
 ## Project 환경 구성
 다음과 같이 Project 및 App 모듈 레벨의 build.gradle 파일에 아이나비 지도 저장소를 추가하고, 의존성을 설정합니다.
-> SDK 0.6.1 버전부터 새로운 지도 저장소로 배포됩니다. 이전 지도 저장소를 이용하시는 경우 지도 저장소를 변경해야 합니다.  
-> ~~`https://dl.bintray.com/inavi-systems/maps/`~~ >  `https://inavisystems.jfrog.io/artifactory/maps/`
+> SDK 0.6.1 버전부터 새로운 지도 저장소로 배포됩니다. 이전 지도 저장소를 이용하시는 경우 새로운 지도 저장소로 변경하셔야 합니다.
+> - 기존 https://dl.bintray.com/inavi-systems/maps/
+> - 신규 https://inavisystems.jfrog.io/artifactory/maps/
 
 ```gradle
 /* Root Project build.gradle */
