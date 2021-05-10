@@ -233,6 +233,16 @@
                 android:value="@string/inv_category_map_option" />
         </activity>
 
+        <activity
+                android:name=".activity.MapCustomStyleActivity"
+                android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+                android:description="@string/inv_description_map_custom_style"
+                android:label="@string/inv_name_map_custom_style">
+            <meta-data
+                    android:name="@string/inv_category"
+                    android:value="@string/inv_category_map_option" />
+        </activity>
+
         <!-- 클릭 이벤트 -->
         <activity
             android:name=".activity.MapClickEventActivity"

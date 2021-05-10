@@ -23,7 +23,7 @@
     <string name="inv_description_marker_overlap">마커 겹침 발생 시 정책 설정</string>
     <string name="inv_option_allow_overlap_markers">마커 겹침 허용</string>
     <string name="inv_option_allow_overlap_title">타이틀 겹침 허용</string>
-    <string name="inv_option_allow_overlap_symbols">심볼 겹침 허용</string>
+    <string name="inv_option_allow_overlap_symbols">지도 심벌 겹침 허용</string>
     <string name="inv_option_animation_enabled">마커에 Fade 애니메이션 적용</string>
 
     <string name="inv_name_info_window">InvInfoWindow</string>
@@ -129,6 +129,13 @@
     <string name="inv_option_scale_bar">축척 바</string>
     <string name="inv_option_zoom">줌 컨트롤러</string>
     <string name="inv_option_cur_location">현위치 버튼</string>
+
+    <string name="inv_name_map_custom_style">Map Custom Style</string>
+    <string name="inv_description_map_custom_style">지도 커스텀 스타일</string>
+    <string name="inv_text_map_style">지도 스타일 : </string>
+    <string name="inv_text_no_custom_style">커스텀 지도 스타일이 없습니다.</string>
+    <string name="inv_text_default_style">기본 스타일</string>
+
 
     <!-- 지도 제한 -->
     <string name="inv_name_map_option_restriction">Map Restriction</string>

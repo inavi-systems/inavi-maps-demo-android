@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.7.0 - 2021-05-10
+### Feature
+- `Map Studio` 서비스로 제작된 커스텀 지도 스타일을 지원하는 API 추가
+  - `MapStyle`, `InaviMapSdk#getSavedCustomMapStyles`, `InaviMap#getCustomMapStyle`, `InaviMap#setCustomMapStyle`, `InvMapOptions#getCustomMapStyle`, `InvMapOptions#setCustomMapStyle`,`AuthSuccessCallback`, `InaviMapSdk#getAuthSuccessCallback`, `InaviMapSdk#setAuthSuccessCallback` 
+
 ## 0.6.1 - 2021-02-22
 
 ### Improvements
