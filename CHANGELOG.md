@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.7.1 - 2022-03-30
+### Feature
+- 로고의 위치와 마진을 설정하는 API 추가
+  - `UiSettings#setLogoGravity`, `UiSettings#setLogoMargins`, `InvMapOptions#setLogoGravity`, `InvMapOptions#setLogoMargins`
+- `UiSettings#isFocalPointCenter` 활성화 상태로 지도 제스처 시 지도의 패딩 값이 포함되지 않는 오류 수정
+
 ## 0.7.0 - 2021-05-10
 ### Feature
 - `Map Studio` 서비스로 제작된 커스텀 지도 스타일을 지원하는 API 추가
@@ -14,7 +20,7 @@
 
 ### Features
 - 지도 심벌의 크기를 설정하는 API 추가
-  - `InaviMap#getSymbolScale`, `InaviMap#setSymbolScale`, `InvMapOptions#getSymbolScale`, `InvMapOptions#symbolScale`,
+  - `InaviMap#getSymbolScale`, `InaviMap#setSymbolScale`, `InvMapOptions#getSymbolScale`, `InvMapOptions#symbolScale`
 - 지도의 기울기 각도 설정 시 건물 3D 효과 지원
 
 ## 0.5.3 - 2020-11-02
