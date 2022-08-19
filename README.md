@@ -4,22 +4,22 @@ Android 플랫폼에서 아이나비 지도를 사용하기 위한 프로젝트 
 ## 사전 준비
 - 아이나비 지도를 사용하기 위해서는 인증을 위한 **앱키**가 필요합니다.
 
-### 서비스 활성화
-- **[NHN Cloud Console](https://console.toast.com/)** 에서 서비스 선택 후 Application Service > Maps를 클릭합니다
-
-### 앱키 확인
-- **앱키**는 **NHN Cloud Console** 상단 **URL & Appkey** 메뉴에서 확인할 수 있습니다.
+### 서비스 활성화 및 앱키 발급
+- NHN Cloud 이용자
+  - **앱키** 발급을 위해서는 **[NHN Cloud](https://www.toast.com/kr)** 계정이 필요합니다. 계정이 없다면 먼저 계정을 생성해주세요.
+  - **[NHN Cloud Console](https://console.toast.com/)** 에서 서비스 선택 후 **Application Service > Maps**를 클릭합니다.
+  - 지도 서비스를 사용할 **조직**과 **프로젝트**를 선택 후 [확인] 버튼을 클릭합니다.
+  - 발급된 **앱키**는 **NHN Cloud Console** 상단 **URL & Appkey** 메뉴에서 확인할 수 있습니다.
+- LG U+ 지도 인프라 이용자
+  - 서비스명, 서비스 한 줄 소개, Application ID, 예상 사용량을 포함하여 [hongspan@inavi.kr](mailto:hongspan@inavi.kr)로 문의해 주세요.
+  - 발급된 **앱키**는 보내주신 이메일로 회신 드리겠습니다.
 
 
 ## Project 환경 구성
 다음과 같이 Project 및 App 모듈 레벨의 build.gradle 파일에 아이나비 지도 저장소를 추가하고, 의존성을 설정합니다.
->` SDK 0.6.1 버전부터 새로운 지도 저장소로 배포됩니다. 이전 지도 저장소를 이용하시는 경우 지도 저장소를 변경해야 합니다.`
->- 기존 - https://dl.bintray.com/inavi-systems/maps/
->- 신규 - https://inavisystems.jfrog.io/artifactory/maps/`
 
 ```gradle
 /* Root Project build.gradle */
-
 allprojects {
     repositories {
         google()
@@ -34,23 +34,36 @@ allprojects {
 
 ```gradle
 /* App Module build.gradle */
-
 dependencies {
-    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.7.1'
+    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.8.0'
 }
+```
+
+
+## 인증 유형 설정
+> `LG U+ 지도 인프라 이용자만 해당됩니다.`
+
+`AndroidManifest.xml`에 다음과 같이 `<meta-data>`를 추가합니다.
+```xml
+<!-- AndroidManifext.xml -->
+<manifest>
+    <application>
+        <meta-data
+            android:name="com.inavi.mapsdk.AuthType"
+            android:value="LgUplusMapInfra" />
+    </application>
+</manifest>
 ```
 
 
 ## 앱키 설정
 발급받은 앱키를 설정할 수 있도록 아래의 두 가지 방법을 제공합니다. 
-
 > `앱키가 설정되지 않으면 지도 초기화 단계에서 인증 오류가 발생합니다.`
 
 ### 1. AndroidManifest.xml에서 설정
-`AndroidManifest.xml`에 `<meta-data>`를 추가하여 앱키를 설정할 수 있습니다.
+`AndroidManifest.xml`에 다음과 같이 `<meta-data>`를 추가하여 앱키를 설정할 수 있습니다.
 ```xml
 <!-- AndroidManifext.xml -->
-
 <manifest>
     <application>
         <meta-data
@@ -76,7 +89,7 @@ InaviMapSdk.getInstance(context).appKey = "YOUR_APP_KEY"
 
 
 ## License
-© 2019-2021. iNavi Systems Corp. All rights reserved.
+© 2019-2022. iNavi Systems Corp. All rights reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

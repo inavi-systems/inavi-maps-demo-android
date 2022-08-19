@@ -20,6 +20,13 @@
             android:name="com.inavi.mapsdk.AppKey"
             android:value="YOUR_APP_KEY" />
 
+        <!-- LG U+ 지도인프라 이용자는 아래 주석을 제거하시고 사용하시기 바랍니다. -->
+        <!--
+        <meta-data
+            android:name="com.inavi.mapsdk.AuthType"
+            android:value="LgUplusMapInfra" />
+        -->
+
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -184,6 +191,26 @@
 
         <!-- 지도 옵션 -->
         <activity
+            android:name=".activity.MapTypeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_type"
+            android:label="@string/inv_name_map_type">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map_option" />
+        </activity>
+
+        <activity
+            android:name=".activity.MapCustomStyleActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_map_custom_style"
+            android:label="@string/inv_name_map_custom_style">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_map_option" />
+        </activity>
+
+        <activity
             android:name=".activity.MapPaddingActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/inv_description_map_option_padding"
@@ -231,16 +258,6 @@
             <meta-data
                 android:name="@string/inv_category"
                 android:value="@string/inv_category_map_option" />
-        </activity>
-
-        <activity
-                android:name=".activity.MapCustomStyleActivity"
-                android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-                android:description="@string/inv_description_map_custom_style"
-                android:label="@string/inv_name_map_custom_style">
-            <meta-data
-                    android:name="@string/inv_category"
-                    android:value="@string/inv_category_map_option" />
         </activity>
 
         <!-- 클릭 이벤트 -->
@@ -294,6 +311,16 @@
                 android:name="@string/inv_category"
                 android:value="@string/inv_category_misc" />
         </activity>
+
+       <activity
+           android:name=".activity.CoordinatesConversionActivity"
+           android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+           android:description="@string/inv_description_misc_coordinates_conversion"
+           android:label="@string/inv_name_misc_coordinates_conversion">
+           <meta-data
+               android:name="@string/inv_category"
+               android:value="@string/inv_category_misc" />
+       </activity>
 
     </application>
 

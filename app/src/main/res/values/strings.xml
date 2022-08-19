@@ -19,6 +19,11 @@
     <string name="inv_name_marker">InvMarker</string>
     <string name="inv_description_marker">마커</string>
 
+    <string name="inv_remove_marker">모든 마커 삭제</string>
+    <string name="inv_remove_polygon">모든 다각형 삭제</string>
+    <string name="inv_remove_polyline">모든 선형 삭제</string>
+    <string name="inv_remove_circle">모든 원 삭제</string>
+
     <string name="inv_name_marker_overlap">InvMarker Overlap</string>
     <string name="inv_description_marker_overlap">마커 겹침 발생 시 정책 설정</string>
     <string name="inv_option_allow_overlap_markers">마커 겹침 허용</string>
@@ -110,6 +115,19 @@
     <string name="inv_event_shape_consume_click_event">클릭 이벤트 소비</string>
 
     <!-- 지도옵션 -->
+    <string name="inv_name_map_type">Map Type</string>
+    <string name="inv_description_map_type">지도 타입</string>
+    <string name="inv_text_map_type">지도 타입 : </string>
+    <string name="inv_text_normal_map">일반 지도</string>
+    <string name="inv_text_satellite_map">항공 지도</string>
+    <string name="inv_text_hybrid_map">하이브리드 지도</string>
+
+    <string name="inv_name_map_custom_style">Map Custom Style</string>
+    <string name="inv_description_map_custom_style">지도 커스텀 스타일</string>
+    <string name="inv_text_map_style">지도 스타일 : </string>
+    <string name="inv_text_no_custom_style">커스텀 지도 스타일이 없습니다.</string>
+    <string name="inv_text_default_style">기본 스타일</string>
+
     <string name="inv_category_map_option">지도 옵션</string>
     <string name="inv_name_map_option_padding">Map Padding</string>
     <string name="inv_description_map_option_padding">지도 패딩 설정</string>
@@ -130,11 +148,6 @@
     <string name="inv_option_zoom">줌 컨트롤러</string>
     <string name="inv_option_cur_location">현위치 버튼</string>
 
-    <string name="inv_name_map_custom_style">Map Custom Style</string>
-    <string name="inv_description_map_custom_style">지도 커스텀 스타일</string>
-    <string name="inv_text_map_style">지도 스타일 : </string>
-    <string name="inv_text_no_custom_style">커스텀 지도 스타일이 없습니다.</string>
-    <string name="inv_text_default_style">기본 스타일</string>
 
 
     <!-- 지도 제한 -->
@@ -182,5 +195,12 @@
     <string name="inv_text_misc_projection_coords_map">지도상 좌표 :</string>
     <string name="inv_format_misc_projection_coords_screen">(%1$.0f, %2$.0f)</string>
     <string name="inv_format_misc_projection_coords_map">(%1$.5f, %2$.5f)</string>
+
+    <!-- 좌표계 변환 -->
+    <string name="inv_name_misc_coordinates_conversion">Coordinates Conversion</string>
+    <string name="inv_description_misc_coordinates_conversion">좌표계 변환</string>
+    <string name="inv_text_misc_coordinates_wgs84">WGS84 좌표</string>
+    <string name="inv_coordinates_conversion">좌표 변환</string>
+    <string name="inv_format_misc_coordinates_wgs84">(%1$.5f, %2$.5f)</string>
 
 </resources>

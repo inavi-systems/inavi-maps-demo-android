@@ -1,7 +1,9 @@
 package com.inavi.maps.androiddemo.activity
 
 import android.graphics.Color
+import android.os.Bundle
 import android.support.v4.graphics.ColorUtils
+import android.widget.Checkable
 import com.inavi.maps.androiddemo.R
 import com.inavi.mapsdk.constants.InvConstants
 import com.inavi.mapsdk.geometry.LatLng
@@ -9,8 +11,9 @@ import com.inavi.mapsdk.maps.CameraPosition
 import com.inavi.mapsdk.maps.InaviMap
 import com.inavi.mapsdk.maps.InvMapOptions
 import com.inavi.mapsdk.style.shapes.InvPolygon
+import kotlinx.android.synthetic.main.activity_inv_shape_remove.*
 
-class InvPolygonActivity : InvMapFragmentActivity(InvMapOptions().camera(INIT_CAMERA)) {
+class InvPolygonActivity : InvMapFragmentActivity(R.layout.activity_inv_shape_remove, InvMapOptions().camera(INIT_CAMERA)) {
 
   companion object {
     private val INIT_CAMERA = CameraPosition(InvConstants.POSITION_INAVI.target, 14.0, 0.0, 0.0)
@@ -31,8 +34,13 @@ class InvPolygonActivity : InvMapFragmentActivity(InvMapOptions().camera(INIT_CA
     )
   }
 
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    rm_shape.text = getString(R.string.inv_remove_polygon)
+  }
+
   override fun onMapReady(inaviMap: InaviMap) {
-    InvPolygon().apply {
+    val polygon1 = InvPolygon().apply {
       coords = POLYGON1_COORDS
       fillColor = ColorUtils.setAlphaComponent(Color.BLUE, 127)
       strokeColor = Color.BLUE
@@ -40,12 +48,28 @@ class InvPolygonActivity : InvMapFragmentActivity(InvMapOptions().camera(INIT_CA
       map = inaviMap
     }
 
-    InvPolygon().apply {
+    val polygon2 = InvPolygon().apply {
       coords = POLYGON2_COORDS
       fillColor = ColorUtils.setAlphaComponent(Color.YELLOW, 127)
       strokeColor = Color.BLACK
       strokeWidth = resources.getDimensionPixelSize(R.dimen.shape_line_width).toFloat()
       map = inaviMap
+    }
+
+    val allPolygons = listOf(polygon1, polygon2)
+
+    rm_shape.setOnClickListener { v ->
+      if (v is Checkable) {
+        val checked = v.isChecked
+        v.isChecked = !checked
+
+        allPolygons.forEach { polygon ->
+          polygon.map = when (checked) {
+            true -> inaviMap
+            else -> null
+          }
+        }
+      }
     }
   }
 }
