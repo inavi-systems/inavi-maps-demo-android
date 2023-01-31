@@ -312,15 +312,24 @@
                 android:value="@string/inv_category_misc" />
         </activity>
 
-       <activity
-           android:name=".activity.CoordinatesConversionActivity"
-           android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-           android:description="@string/inv_description_misc_coordinates_conversion"
-           android:label="@string/inv_name_misc_coordinates_conversion">
-           <meta-data
-               android:name="@string/inv_category"
-               android:value="@string/inv_category_misc" />
-       </activity>
+        <activity
+            android:name=".activity.CoordinatesConversionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_misc_coordinates_conversion"
+            android:label="@string/inv_name_misc_coordinates_conversion">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_misc" />
+        </activity>
+        <activity
+            android:name=".activity.PickPoisActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/inv_description_misc_pick_poi"
+            android:label="@string/inv_name_misc_pick_poi">
+            <meta-data
+                android:name="@string/inv_category"
+                android:value="@string/inv_category_misc" />
+        </activity>
 
     </application>
 

@@ -13,6 +13,10 @@
     <string name="inv_name_map_view">InvMapView</string>
     <string name="inv_description_map_view">레이아웃에 InvMapView를 추가하여 지도 표출</string>
 
+    <string name="inv_map_type_normal">Normal</string>
+    <string name="inv_map_type_hybrid">Hybrid</string>
+    <string name="inv_map_type_satellite">Satellite</string>
+
     <!-- 셰이프 -->
     <string name="inv_category_shapes">셰이프</string>
 
@@ -148,8 +152,6 @@
     <string name="inv_option_zoom">줌 컨트롤러</string>
     <string name="inv_option_cur_location">현위치 버튼</string>
 
-
-
     <!-- 지도 제한 -->
     <string name="inv_name_map_option_restriction">Map Restriction</string>
     <string name="inv_description_map_option_restriction_map">지도 제한</string>
@@ -202,5 +204,11 @@
     <string name="inv_text_misc_coordinates_wgs84">WGS84 좌표</string>
     <string name="inv_coordinates_conversion">좌표 변환</string>
     <string name="inv_format_misc_coordinates_wgs84">(%1$.5f, %2$.5f)</string>
+
+    <!-- Pick POIs -->
+    <string name="inv_name_misc_pick_poi">Pick POIs</string>
+    <string name="inv_description_misc_pick_poi">특정 화면 영역에 표출되는 POI의 정보를 확인한다.</string>
+    <string name="inv_text_poi_info">name: %1$s, POI ID: %2$d</string>
+    <string name="inv_text_no_poi">선택된 POI가 없습니다.</string>
 
 </resources>

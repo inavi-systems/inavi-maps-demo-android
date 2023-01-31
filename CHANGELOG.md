@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.8.1 - 2023-01-31
+
+### Features
+- 특정 화면 영역에 표출되는 POI의 정보를 반환하는 API 추가
+    - `Poi`, `InaviMap#pickPois`
+- 지도 인증 과정에서 지도에 적용할 커스텀 지도 스타일을 설정하는 API 추가
+    - `CustomMapStyleCallback`, `InvMapFragment#setInitialCustomMapStyleCallback`, `InvMapView#setInitialCustomMapStyleCallback`
+
+### Bug Fixes
+- 특정 상황에서 지도 생성/파괴 반복 시 비정상 종료되는 오류 수정
+
 ## 0.8.0 - 2022-08-19
 ### Feature
 - 하이브리드/항공 지도 유형 설정 API 추가
