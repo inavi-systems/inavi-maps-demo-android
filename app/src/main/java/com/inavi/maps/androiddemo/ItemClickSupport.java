@@ -1,7 +1,8 @@
 package com.inavi.maps.androiddemo;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ItemClickSupport {
     private final RecyclerView recyclerView;

@@ -1,8 +1,8 @@
 package com.inavi.maps.androiddemo.activity
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.inavi.mapsdk.maps.OnMapReadyCallback
 
 abstract class InvBaseActivity : AppCompatActivity(), OnMapReadyCallback {

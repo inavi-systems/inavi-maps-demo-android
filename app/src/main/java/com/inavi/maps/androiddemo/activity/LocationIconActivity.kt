@@ -2,8 +2,8 @@ package com.inavi.maps.androiddemo.activity
 
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v4.graphics.ColorUtils
 import android.widget.*
+import androidx.core.graphics.ColorUtils
 import com.inavi.maps.androiddemo.R
 import com.inavi.maps.androiddemo.util.DpToPx
 import com.inavi.mapsdk.maps.InaviMap

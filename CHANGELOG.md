@@ -1,8 +1,16 @@
 # Change Log
 
-## 0.8.1 - 2023-01-31
-
+## 0.9.0 - 2023-05-19
 ### Features
+- Support -> AndroidX 마이그레이션
+- `FusedLocationProvider(Activity, int)` *Deprecated* 적용 (`FusedLocationProvider(AppCompatActivity, OnPermissionResultCallback)`로 대체)
+- `FusedLocationProvider(Fragment, int)` *Deprecated* 적용 (`FusedLocationProvider(Fragment, OnPermissionResultCallback)`로 대체)
+- 권한 요청 결과 콜백 API 추가
+  - `OnPermissionResultCallback`
+- `play-services-location` 라이브러리 런타임 종속성으로 변경 
+
+## 0.8.1 - 2023-01-31
+### Feature$$s
 - 특정 화면 영역에 표출되는 POI의 정보를 반환하는 API 추가
     - `Poi`, `InaviMap#pickPois`
 - 지도 인증 과정에서 지도에 적용할 커스텀 지도 스타일을 설정하는 API 추가

@@ -1,8 +1,8 @@
 package com.inavi.maps.androiddemo.activity
 
 import android.graphics.Color
-import android.support.v4.graphics.ColorUtils
 import android.widget.Checkable
+import androidx.core.graphics.ColorUtils
 import com.inavi.maps.androiddemo.R
 import com.inavi.mapsdk.constants.InvConstants
 import com.inavi.mapsdk.geometry.LatLng

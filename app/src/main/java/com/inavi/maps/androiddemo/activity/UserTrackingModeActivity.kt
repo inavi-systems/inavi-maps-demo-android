@@ -2,15 +2,15 @@ package com.inavi.maps.androiddemo.activity
 
 import android.app.AlertDialog
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.support.v4.app.ActivityCompat
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.core.app.ActivityCompat
+import com.google.android.material.snackbar.Snackbar
 import com.inavi.maps.androiddemo.BuildConfig
 import com.inavi.maps.androiddemo.R
 import com.inavi.mapsdk.maps.*
@@ -20,7 +20,7 @@ class UserTrackingModeActivity : InvMapFragmentActivity(R.layout.activity_user_t
   OnUserTrackingModeChangedListener, AdapterView.OnItemSelectedListener {
 
   companion object {
-    private const val PERMISSION_REQUEST_CODE = 10000
+    private const val ACCESS_FINE_LOCATION = "android.permission.ACCESS_FINE_LOCATION"
   }
 
   private var userTrackingMode = UserTrackingMode.Tracking
@@ -37,41 +37,29 @@ class UserTrackingModeActivity : InvMapFragmentActivity(R.layout.activity_user_t
     val options = resources.getStringArray(R.array.inv_option_array_location_tracking_mode)
     spinnerTracking.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, options)
     spinnerTracking.onItemSelectedListener = this
-
-    locationProvider = FusedLocationProvider(this, PERMISSION_REQUEST_CODE)
+    locationProvider = FusedLocationProvider(this@UserTrackingModeActivity) { isGranted ->
+      Snackbar.make(spinnerTracking, "위치 권한을 ${if (isGranted) "허용" else "거부"} 하였습니다.", Snackbar.LENGTH_SHORT).show()
+      if (!isGranted) {
+        if (!ActivityCompat.shouldShowRequestPermissionRationale(this@UserTrackingModeActivity, ACCESS_FINE_LOCATION)) {
+          AlertDialog.Builder(this@UserTrackingModeActivity).apply {
+            setMessage(R.string.inv_text_popup_location_permission_denied)
+            setNegativeButton(R.string.inv_text_popup_settings) { _, _ ->
+              Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + BuildConfig.APPLICATION_ID)).let {
+                startActivity(it)
+              }
+            }
+            setPositiveButton(R.string.inv_text_popup_ok, null)
+            setCancelable(false)
+          }.show()
+        }
+        inaviMap?.userTrackingMode = UserTrackingMode.None
+      }
+    }
   }
 
   override fun onDestroy() {
     super.onDestroy()
     locationProvider = null
-  }
-
-  override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-    if (locationProvider?.onRequestPermissionsResult(requestCode, permissions, grantResults) == true) {
-      for (permission in permissions) {
-        if (ActivityCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
-          if (!ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {
-            AlertDialog.Builder(this@UserTrackingModeActivity).apply {
-              setMessage(R.string.inv_text_popup_location_permission_denied)
-              setNegativeButton(R.string.inv_text_popup_settings) { _, _ ->
-                Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + BuildConfig.APPLICATION_ID)).let {
-                  startActivity(it)
-                }
-              }
-              setPositiveButton(R.string.inv_text_popup_ok, null)
-              setCancelable(false)
-            }.show()
-          }
-
-          inaviMap?.userTrackingMode = UserTrackingMode.None
-          break
-        }
-      }
-
-      return
-    }
-
-    super.onRequestPermissionsResult(requestCode, permissions, grantResults)
   }
 
   override fun onMapReady(inaviMap: InaviMap) {

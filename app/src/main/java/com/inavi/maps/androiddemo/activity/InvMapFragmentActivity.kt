@@ -22,8 +22,7 @@ open class InvMapFragmentActivity(private val layoutId: Int, private val options
         supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
       }
     }
-
-    mapFragment.getMapAsync(this)
+    mapFragment?.getMapAsync(this)
   }
 
   override fun onMapReady(inaviMap: InaviMap) {

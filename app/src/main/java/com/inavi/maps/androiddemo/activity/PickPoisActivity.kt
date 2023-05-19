@@ -2,10 +2,10 @@ package com.inavi.maps.androiddemo.activity
 
 import android.graphics.PointF
 import android.graphics.RectF
-import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
 import android.view.View
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import com.inavi.maps.androiddemo.R
 import com.inavi.maps.androiddemo.util.DpToPx
 import com.inavi.mapsdk.geometry.LatLng
