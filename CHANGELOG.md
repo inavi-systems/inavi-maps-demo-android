@@ -10,7 +10,7 @@
 - `play-services-location` 라이브러리 런타임 종속성으로 변경 
 
 ## 0.8.1 - 2023-01-31
-### Feature$$s
+### Features
 - 특정 화면 영역에 표출되는 POI의 정보를 반환하는 API 추가
     - `Poi`, `InaviMap#pickPois`
 - 지도 인증 과정에서 지도에 적용할 커스텀 지도 스타일을 설정하는 API 추가
