@@ -26,7 +26,7 @@ allprojects {
         ...
         // 아이나비 지도 저장소
         maven {
-            url 'https://inavisystems.jfrog.io/artifactory/maps/'
+            url 'https://repo.inavi.com/artifactory/maps'
         }
     }
 }
