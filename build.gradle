@@ -17,8 +17,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-
-        maven { url 'https://inavisystems.jfrog.io/artifactory/maps/' }
+        maven { url 'https://repo.inavi.com/artifactory/maps' }
     }
 }
 
